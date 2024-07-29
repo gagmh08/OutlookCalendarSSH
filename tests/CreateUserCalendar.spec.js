@@ -130,16 +130,18 @@ test(" Keep Create new outlook calender", async ({ page }) => {
 
 });
 
-test("Keep on Create new outlook calender", async ({ page }) => {
+test.only("Keep on Create new outlook calender", async ({ page }) => {
 
   const loginPage = new LoginPage(page);
   const calendarPage = new CalendarPage2(page);
-  const username = "messicopaamerica2024@outlook.com";
-  const password = "Balondeoro10";
+  //const username = "messicopaamerica2024@outlook.com";
+  //const password = "Balondeoro10";
 
   //const username = "verygoodcoffee2024@outlook.com";
- // const password = "Cafeo2024";
-
+  //const password = "Cafeo2024";
+  
+  const username = "fufuvolo@outlook.com";
+  const password = "Bettylafea1";
   test.setTimeout(36000000);
   
 
@@ -154,8 +156,10 @@ test("Keep on Create new outlook calender", async ({ page }) => {
 
   await calendarPage.navigateToBlankCalendar();
 
-  for (let i = 999; i <= 1010; i++) {
-    await calendarPage.createCalendar(`Movies ${i}`);
+  
+
+  for (let i = 1; i <= 10; i++) {
+    await calendarPage.createCalendar(`Matches ${i}`);
   }
 
   await page.waitForTimeout(500);
@@ -172,7 +176,7 @@ test("Keep on Create new outlook calender", async ({ page }) => {
 });
 
 
-test.only("Count outlook calender", async ({ page }) => {
+test("Count outlook calender", async ({ page }) => {
 
   const loginPage = new LoginPage(page);
   const calendarPage = new CalendarPage2(page);
